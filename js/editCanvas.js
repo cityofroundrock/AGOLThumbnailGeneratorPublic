@@ -5,7 +5,7 @@ editCanvas.width = 600;
 var ctx = editCanvas.getContext('2d');
 
 // Title and Title Background
-var titleComponent = {
+/*var titleComponent = {
   properties: {
     text: function() {
       return document.querySelector("#title").value;
@@ -49,10 +49,10 @@ var titleComponent = {
     }
     wrapText(ctx, this.properties.text(), 255, 326, 450, 35);
   }
-}
+}*/
 
 // Category and Category Background
-/*var categoryComponent = {
+var categoryComponent = {
   properties: {
     text: function() {
       return document.querySelector('#category').value;
@@ -80,7 +80,7 @@ var titleComponent = {
     ctx.fillText(this.properties.text(), 0, 0);
     ctx.restore();
   }
-}*/
+}
 
 // Background Image
 var backgroundComponent = {
@@ -161,8 +161,8 @@ var logoComponent = {
 function draw() {
   //Draw Title Component
   ctx.clearRect(0, 0, editCanvas.width, editCanvas.height);
-  titleComponent.draw();
-  /*categoryComponent.draw();*/
+  /*titleComponent.draw();*/
+  categoryComponent.draw();
   backgroundComponent.draw();
   logoComponent.draw();
 
@@ -171,16 +171,16 @@ function draw() {
 
 document.addEventListener('DOMContentLoaded', function() {
   // Color Picker
-  $('#title-color').colorpicker({
+  /*$('#title-color').colorpicker({
     component: '.btn'
-  }).on('changeColor', draw);
+  }).on('changeColor', draw);*/
 
   $('#category-color').colorpicker({
     component: '.btn'
   }).on('changeColor', draw);
 
   // Update Events
-  document.querySelector('#title').addEventListener('keyup', draw);
+  /*document.querySelector('#title').addEventListener('keyup', draw);*/
   document.querySelector('#category').addEventListener('change', draw);
   document.querySelector('#background')
     .addEventListener('change', draw);
@@ -188,17 +188,17 @@ document.addEventListener('DOMContentLoaded', function() {
     .addEventListener('change', draw);
 
   // Any Query Params?
-  if (getUrlParameter('titleColor')) {
+  /*if (getUrlParameter('titleColor')) {
     $("#title-color")
       .colorpicker('setValue', 'rgba(' + getUrlParameter('titleColor') + ')');
-  }
+  }*/
   if (getUrlParameter('sidebarColor')) {
     $("#category-color")
       .colorpicker('setValue', 'rgba(' + getUrlParameter('sidebarColor') + ')');
   }
-  if (getUrlParameter('title')) {
+  /*if (getUrlParameter('title')) {
     $("#title").val(getUrlParameter('title'))
-  }
+  }*/
   if (getUrlParameter('category')) {
     $("#category option").each(function(i, opt) {
       if ($(opt).val().toLowerCase() == getUrlParameter('category').toLowerCase()) {
