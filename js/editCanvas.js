@@ -67,7 +67,7 @@ var categoryComponent = {
   },
   _bg: function() {
     ctx.fillStyle = this.properties.bgColor();
-    ctx.fillRect(500, 0, 150, 400);
+    ctx.fillRect(0, 300, 500, 120);
   },
   _text: function() {
     ctx.save();
