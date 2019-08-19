@@ -162,7 +162,7 @@ function draw() {
   //Draw Title Component
   ctx.clearRect(0, 0, editCanvas.width, editCanvas.height);
   titleComponent.draw();
-  categoryComponent.draw();
+  /*categoryComponent.draw();*/
   backgroundComponent.draw();
   logoComponent.draw();
 
