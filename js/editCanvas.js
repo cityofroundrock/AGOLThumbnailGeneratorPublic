@@ -10,9 +10,9 @@ var titleComponent = {
     text: function() {
       return document.querySelector("#title").value;
     },
-    /*bgColor: function() {
+    bgColor: function() {
       return $("#title-color").colorpicker('getValue');
-    }*/
+    }
   },
   draw: function() {
     this._bg();
