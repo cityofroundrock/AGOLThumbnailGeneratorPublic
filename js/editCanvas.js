@@ -10,9 +10,9 @@ var titleComponent = {
     text: function() {
       return document.querySelector("#title").value;
     },
-    bgColor: function() {
+    /*bgColor: function() {
       return $("#title-color").colorpicker('getValue');
-    }
+    }*/
   },
   draw: function() {
     this._bg();
@@ -52,7 +52,7 @@ var titleComponent = {
 }
 
 // Category and Category Background
-var categoryComponent = {
+/*var categoryComponent = {
   properties: {
     text: function() {
       return document.querySelector('#category').value;
@@ -80,7 +80,7 @@ var categoryComponent = {
     ctx.fillText(this.properties.text(), 0, 0);
     ctx.restore();
   }
-}
+}*/
 
 // Background Image
 var backgroundComponent = {
