@@ -71,8 +71,8 @@ var categoryComponent = {
   },
   _text: function() {
     ctx.save();
-    /*ctx.translate(550, 200);
-    ctx.rotate(-0.5 * Math.PI);*/
+    ctx.translate(550, 200);
+    /*ctx.rotate(-0.5 * Math.PI);*/
     editCanvas.style.letterSpacing = 4;
     ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
     ctx.font = '48px sans-serif';
