@@ -71,10 +71,10 @@ var categoryComponent = {
   },
   _text: function() {
     ctx.save();
-    ctx.translate(350, 325);
+    ctx.translate(425, 325);
     /*ctx.rotate(-0.5 * Math.PI);*/
     editCanvas.style.letterSpacing = 4;
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+    ctx.fillStyle = 'rgba(255, 255, 255, 1)';
     ctx.font = '48px sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'top';
