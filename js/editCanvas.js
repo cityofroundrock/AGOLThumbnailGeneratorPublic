@@ -83,7 +83,11 @@ var logoComponent = {
 
     logo_image = new Image();
     logo_image.src = 'img/logo.png';
-    ctx.drawImage(logo_image, 10, 308,100,86);
+    /*ctx.drawImage(logo_image, 10, 308,100,86);*/
+
+    logo_image.onload = function () {
+      ctx.drawImage(logo_image,10, 308,100,86);
+  }
   }
 }
 
