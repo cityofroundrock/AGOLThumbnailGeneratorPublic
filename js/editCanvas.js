@@ -4,53 +4,6 @@ editCanvas.width = 600;
 
 var ctx = editCanvas.getContext('2d');
 
-// Title and Title Background
-/*var titleComponent = {
-  properties: {
-    text: function() {
-      return document.querySelector("#title").value;
-    },
-    bgColor: function() {
-      return $("#title-color").colorpicker('getValue');
-    }
-  },
-  draw: function() {
-    this._bg();
-    this._text();
-  },
-  _bg: function() {
-    ctx.fillStyle = this.properties.bgColor();
-    ctx.fillRect(0, 300, 500, 120);
-  },
-  _text: function() {
-    editCanvas.letterSpacing = 2;
-    ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-    ctx.font = '30px sans-serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'top';
-
-    function wrapText(context, text, x, y, maxWidth, lineHeight) {
-      var words = text.split(' ');
-      var line = '';
-
-      for (var n = 0; n < words.length; n++) {
-        var testLine = line + words[n] + ' ';
-        var metrics = context.measureText(testLine);
-        var testWidth = metrics.width;
-        if (testWidth > maxWidth && n > 0) {
-          context.fillText(line, x, y);
-          line = words[n] + ' ';
-          y += lineHeight;
-        } else {
-          line = testLine;
-        }
-      }
-      context.fillText(line, x, y);
-    }
-    wrapText(ctx, this.properties.text(), 255, 326, 450, 35);
-  }
-}*/
-
 // Category and Category Background
 var categoryComponent = {
   properties: {
@@ -171,14 +124,6 @@ function draw() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Color Picker
-  /*$('#title-color').colorpicker({
-    component: '.btn'
-  }).on('changeColor', draw);*/
-
-  /*$('#category-color').colorpicker({
-    component: '.btn'
-  }).on('changeColor', draw);*/
 
   // Update Events
   /*document.querySelector('#title').addEventListener('keyup', draw);*/
@@ -189,24 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
     .addEventListener('change', draw);
 
   // Any Query Params?
-  /*if (getUrlParameter('titleColor')) {
-    $("#title-color")
-      .colorpicker('setValue', 'rgba(' + getUrlParameter('titleColor') + ')');
-  }*/
-  if (getUrlParameter('sidebarColor')) {
-    $("#category-color")
-      .colorpicker('setValue', 'rgba(' + getUrlParameter('sidebarColor') + ')');
-  }
-  /*if (getUrlParameter('title')) {
-    $("#title").val(getUrlParameter('title'))
-  }*/
-  if (getUrlParameter('category')) {
-    $("#category option").each(function(i, opt) {
-      if ($(opt).val().toLowerCase() == getUrlParameter('category').toLowerCase()) {
-        $(opt).attr('selected', true)
-      }
-    })
-  }
   if (getUrlParameter('background')) {
     $("#background-url").val(getUrlParameter('background'));
   }
