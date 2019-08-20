@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   instances = M.FormSelect.init(elems);
 
-  draw();
+  document.fonts.load('10pt "Play"').then(draw);
 
   document.querySelector('#download-image').addEventListener('click', function() {
     //to png
