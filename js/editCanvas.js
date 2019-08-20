@@ -123,7 +123,7 @@ function draw() {
   /*titleComponent.draw();*/
   categoryComponent.draw();
   backgroundComponent.draw();
-  logoComponent.draw();
+  /*logoComponent.draw();*/
 
   //Store to local storage.. next
 }
