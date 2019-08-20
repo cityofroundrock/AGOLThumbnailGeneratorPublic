@@ -87,7 +87,7 @@ var logoComponent = {
 
     logo_image = new Image();
     logo_image.src = 'img/logo.png';
-    ctx.drawImage(logo_image, 100, 100);
+    ctx.drawImage(logo_image, 0, 200);
     
     
    /* var file = document.querySelector(this.properties.domId).files[0];
