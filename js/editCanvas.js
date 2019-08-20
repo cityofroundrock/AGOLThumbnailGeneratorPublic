@@ -112,8 +112,8 @@ var logoComponent = {
 
     if (!file && document.querySelector('#logo-url').value !== '') {
       background.src = document.querySelector('#logo-url').value;
-    }
-  }*/
+    }*/
+  }
 }
 
 // main function to draw / redraw canvas
