@@ -24,7 +24,7 @@ var categoryComponent = {
     ctx.translate(455, 325);
     editCanvas.style.letterSpacing = 4;
     ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-    ctx.font = '48px Play';
+    ctx.font = '48px Play sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'top';
     ctx.fillText(this.properties.text(), 0, 0);
