@@ -85,7 +85,12 @@ var logoComponent = {
   },
   _addImage: function() {
 
-    var file = document.querySelector(this.properties.domId).files[0];
+    logo_image = new Image();
+    logo_image.src = 'img/logo.png';
+    ctx.drawImage(logo_image, 100, 100);
+    
+    
+   /* var file = document.querySelector(this.properties.domId).files[0];
     var background = new Image();
     background.crossOrigin = "Anonymous";
     var reader = new FileReader();
@@ -108,7 +113,7 @@ var logoComponent = {
     if (!file && document.querySelector('#logo-url').value !== '') {
       background.src = document.querySelector('#logo-url').value;
     }
-  }
+  }*/
 }
 
 // main function to draw / redraw canvas
