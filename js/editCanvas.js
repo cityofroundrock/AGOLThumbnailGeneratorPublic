@@ -16,7 +16,7 @@ var categoryComponent = {
     this._text();
   },
   _bg: function() {
-    ctx.fillStyle = "rgba(0,0,0,0.8)";
+    ctx.fillStyle = "rgba(0,0,0,0.6)";
     ctx.fillRect(0, 300, 600, 120);
   },
   _text: function() {
