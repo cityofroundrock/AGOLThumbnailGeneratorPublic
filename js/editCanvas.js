@@ -57,16 +57,16 @@ var categoryComponent = {
     text: function() {
       return document.querySelector('#category').value;
     },
-    bgColor: function() {
+    /*bgColor: function() {
       return $("#category-color").colorpicker('getValue');
-    }
+    }*/
   },
   draw: function() {
     this._bg();
     this._text();
   },
   _bg: function() {
-    ctx.fillStyle = this.properties.bgColor();
+    ctx.fillStyle = rgba(0,0,0,0.8);
     ctx.fillRect(0, 300, 600, 120);
   },
   _text: function() {
@@ -176,9 +176,9 @@ document.addEventListener('DOMContentLoaded', function() {
     component: '.btn'
   }).on('changeColor', draw);*/
 
-  $('#category-color').colorpicker({
+  /*$('#category-color').colorpicker({
     component: '.btn'
-  }).on('changeColor', draw);
+  }).on('changeColor', draw);*/
 
   // Update Events
   /*document.querySelector('#title').addEventListener('keyup', draw);*/
