@@ -104,8 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#category').addEventListener('change', draw);
   document.querySelector('#background')
     .addEventListener('change', draw);
-  document.querySelector('#logo')
-    .addEventListener('change', draw);
 
   // Select Dropdowns to Material Styles
   var elems = document.querySelectorAll('select');
