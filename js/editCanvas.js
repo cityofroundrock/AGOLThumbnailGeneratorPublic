@@ -86,7 +86,6 @@ var logoComponent = {
     ctx.drawImage(logo_image, 10, 308,100,86);
   }
 }
-logoComponent.draw();
 
 // main function to draw / redraw canvas
 function draw() {
