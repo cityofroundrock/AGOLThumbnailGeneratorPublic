@@ -82,13 +82,11 @@ var logoComponent = {
   _addImage: function() {
 
     logo_image = new Image();
-    logo_image.onload = function () {
-      ctx.drawImage(img, 10, 308, 100, 86);
-  }
     logo_image.src = 'img/logo.png';
-    /*ctx.drawImage(logo_image, 10, 308,100,86);*/
+    ctx.drawImage(logo_image, 10, 308,100,86);
   }
 }
+logoComponent.draw();
 
 // main function to draw / redraw canvas
 function draw() {
@@ -96,8 +94,8 @@ function draw() {
   ctx.clearRect(0, 0, editCanvas.width, editCanvas.height);
   categoryComponent.draw();
   backgroundComponent.draw();
-  /*logoComponent.draw();*/
-  //Store to local storage.. next
+  logoComponent.draw();
+  
 }
 
 document.addEventListener('DOMContentLoaded', function() {
