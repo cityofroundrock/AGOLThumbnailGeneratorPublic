@@ -24,7 +24,7 @@ var categoryComponent = {
     ctx.translate(455, 325);
     editCanvas.style.letterSpacing = 4;
     ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-    ctx.font = '48px sans-serif';
+    ctx.font = '48px Play';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'top';
     ctx.fillText(this.properties.text(), 0, 0);
@@ -83,11 +83,9 @@ var logoComponent = {
 
     logo_image = new Image();
     logo_image.src = 'img/logo.png';
-    /*ctx.drawImage(logo_image, 10, 308,100,86);*/
-
     logo_image.onload = function () {
       ctx.drawImage(logo_image,10, 308,100,86);
-  }
+    }
   }
 }
 
@@ -104,7 +102,6 @@ function draw() {
 document.addEventListener('DOMContentLoaded', function() {
 
   // Update Events
-  /*document.querySelector('#title').addEventListener('keyup', draw);*/
   document.querySelector('#category').addEventListener('change', draw);
   document.querySelector('#background')
     .addEventListener('change', draw);
@@ -127,11 +124,3 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.removeChild(a);
   });
 });
-
-// Helper function to get URL Query Params
-function getUrlParameter(name) {
-  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-  var results = regex.exec(location.search);
-  return results === null ? false : decodeURIComponent(results[1].replace(/\+/g, ' '));
-};
