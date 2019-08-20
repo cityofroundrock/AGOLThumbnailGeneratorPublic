@@ -9,10 +9,7 @@ var categoryComponent = {
   properties: {
     text: function() {
       return document.querySelector('#category').value;
-    },
-    /*bgColor: function() {
-      return $("#category-color").colorpicker('getValue');
-    }*/
+    }
   },
   draw: function() {
     this._bg();
@@ -25,7 +22,6 @@ var categoryComponent = {
   _text: function() {
     ctx.save();
     ctx.translate(455, 325);
-    /*ctx.rotate(-0.5 * Math.PI);*/
     editCanvas.style.letterSpacing = 4;
     ctx.fillStyle = 'rgba(255, 255, 255, 1)';
     ctx.font = '48px sans-serif';
@@ -86,33 +82,11 @@ var logoComponent = {
   _addImage: function() {
 
     logo_image = new Image();
+    logo_image.onload = function () {
+      ctx.drawImage(img, 10, 308, 100, 86);
+  }
     logo_image.src = 'img/logo.png';
-    ctx.drawImage(logo_image, 10, 305,100,86);
-    
-    
-   /* var file = document.querySelector(this.properties.domId).files[0];
-    var background = new Image();
-    background.crossOrigin = "Anonymous";
-    var reader = new FileReader();
-
-    background.onload = function() {
-      sourceHeight = background.height;
-      sourceWidth = background.width;
-      ctx.drawImage(background, 0, 0, sourceWidth, sourceHeight,
-        5, 5, 145, 145);
-    }
-
-    if (file) {
-      reader.addEventListener("load", function() {
-        background.src = reader.result;
-      }, false);
-
-      reader.readAsDataURL(file);
-    }
-
-    if (!file && document.querySelector('#logo-url').value !== '') {
-      background.src = document.querySelector('#logo-url').value;
-    }*/
+    /*ctx.drawImage(logo_image, 10, 308,100,86);*/
   }
 }
 
@@ -120,11 +94,9 @@ var logoComponent = {
 function draw() {
   //Draw Title Component
   ctx.clearRect(0, 0, editCanvas.width, editCanvas.height);
-  /*titleComponent.draw();*/
   categoryComponent.draw();
   backgroundComponent.draw();
-  logoComponent.draw();
-
+  /*logoComponent.draw();*/
   //Store to local storage.. next
 }
 
@@ -137,14 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
     .addEventListener('change', draw);
   document.querySelector('#logo')
     .addEventListener('change', draw);
-
-  // Any Query Params?
-  if (getUrlParameter('background')) {
-    $("#background-url").val(getUrlParameter('background'));
-  }
-  if (getUrlParameter('logo')) {
-    $("#logo-url").val(getUrlParameter('logo'));
-  }
 
   // Select Dropdowns to Material Styles
   var elems = document.querySelectorAll('select');
