@@ -12,7 +12,7 @@ thumbnails for ArcGIS Online items, utilizing HTML5 canvas.
 2. Open Snagit Editor or some other screen capture software available to you.
 3. Create a new image 200x133 pixels in size and save.
 4. Go to https://cityofroundrock.github.io/ArcGISThumbnailGenerator/ and upload the saved image to the background field.
-5. Select the item type (Web App, Web Map, Web Service)
+5. Select the item type (Web App, Web Map, Web Layer)
 6. Download the generated thumbnail
 7. Go to the item details overview screen in ArcGIS Online
 8. Click edit thumbnail and select upload image
